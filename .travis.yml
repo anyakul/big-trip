@@ -13,7 +13,7 @@ cache:
 script:
   - yarn test
   - yarn build
-  - echo my-custom-domain.ru > build/CNAME
+  - echo my-custom-domain.ru > public/CNAME
 
 deploy:
   provider: pages
@@ -21,7 +21,7 @@ deploy:
   committer-from-gh: true
   skip-cleanup: true
   keep-history: true
-  local-dir: puublic
+  local-dir: public
   repo: anyakul/big-trip
   target-branch: master
   on:
