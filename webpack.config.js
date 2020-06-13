@@ -25,6 +25,9 @@ module.exports = {
     ],
   },
   plugins: [
-    new MomentLocalesPlugin()
+    new MomentLocalesPlugin(),
+    new GhPagesWebpackPlugin({
+        path: './public'
+    })
   ]
 };
