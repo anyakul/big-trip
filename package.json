@@ -9,7 +9,15 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "webpack",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "deploy": "NODE_ENV=production webpack",
+    "publish": "git checkout gh-pages && 
+               git merge master &&
+               npm run deploy &&
+               git commit -am 'Deploy' &&
+               git push origin gh-pages &&
+               git checkout @{-1}"
+},
   },
   "devDependencies": {
     "css-loader": "3.4.1",
