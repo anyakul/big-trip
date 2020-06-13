@@ -1,6 +1,7 @@
 'use strict';
 
 const MomentLocalesPlugin = require(`moment-locales-webpack-plugin`);
+const GhPagesWebpackPlugin = require('gh-pages-webpack-plugin');
 const path = require('path');
 const publicPath = path.join(__dirname, `public`);
 
